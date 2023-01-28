@@ -1,0 +1,10 @@
+
+while S[i]<>"." do
+    if S[i] = " "
+        nbrOfWords := nbrOfWords+1
+    end if
+
+    if S[i] = "a" or S[i] = "e" or S[i] = "i" or S[i] = "u" or S[i] = "o"
+        nbrOfVoyels := nbrOfVoyels + 1
+    end if
+end while
