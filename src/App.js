@@ -1,31 +1,33 @@
 import './App.css';
-import Address from './Components/Profile/Address.js';
+import Profile from './Components/Profile/Profile.jsx';
 import myPhoto from './img/myPhoto.jpeg'
-import ProfileImg from './Components/Profile/ProfilePhoto.js';
-import FullName from './Components/Profile/FullName.js';
 
-let myFullName ='Thameur BEN ABDALLAH';
-let myAddress = 'Sfax';
+
+
+
 
 function App() {
   
   
+    let name = "Thameur Ben Abdallah";
+    let profession = 'Engineer';
+    let bio = ' 38 years old freelance devolopper'
+
+    const onClickAlert =  (name) => {
+      e.preventDefault();
+      alert(`Hello, ${name}!`);
+    };
   return (
     
+    
     <div className="App">
-      
-      <div>
-        <ProfileImg   imgLink = {myPhoto} userName = {myFullName} />    
-        </div>
-      <div>
-        <FullName   name = {myFullName}/>    
-        </div>
-      
-        <Address  address = {myAddress}/>  
-        
-      
+      <header className="App-header">
+      <Profile fullName= {name} profession = {profession} bio = {bio} onClickHandler= {onClickAlert(name) }>{myPhoto}</Profile>
+      </header>
     </div>
   );
+  
 }
 
 export default App;
+
