@@ -13,7 +13,7 @@ function App() {
     let profession = 'Engineer';
     let bio = ' 38 years old freelance devolopper'
 
-    const onClickAlert =  (name) => {
+    const onClickAlert =  (e) => {
       e.preventDefault();
       alert(`Hello, ${name}!`);
     };
@@ -22,7 +22,7 @@ function App() {
     
     <div className="App">
       <header className="App-header">
-      <Profile fullName= {name} profession = {profession} bio = {bio} onClickHandler= {onClickAlert(name) }>{myPhoto}</Profile>
+      <Profile fullName= {name} profession = {profession} bio = {bio} onClickHandler= {onClickAlert }>{myPhoto}</Profile>
       </header>
     </div>
   );
